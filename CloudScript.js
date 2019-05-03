@@ -1,6 +1,6 @@
 handlers.ReturnDictionary = function (args, context)
 {    
-  var dict = "a string";
+  var dict = {};
 
       dict["one"] = 1;
 
