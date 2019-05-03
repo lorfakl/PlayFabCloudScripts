@@ -6,7 +6,7 @@ handlers.ReturnDictionary = function (args, context)
 
       dict["two"] = 2;
 
-  JSON.stringify(dict);
+  String(dict);
   return dict;
 
 }
