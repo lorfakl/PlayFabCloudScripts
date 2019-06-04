@@ -1,21 +1,19 @@
 // Should be invoked from a task that runs over certain segment
-handlers.PopulateLeaderboard = (args,ctx) => {
-    // When handler is executed as a task over the segment
-    // we can extract individual player id using the next line:
-    let playerId = ctx.playerProfile.PlayerId;
+handlers.Rule_TestProfile = function (args, context)
+{
+    var profile = context.playerProfile;
+    var totalAmt = profile.TotalValueToDateInUSD/100;
 
-    // Use player id and update player statistics as follows:
-    server.UpdatePlayerStatistics({
-        PlayFabId : playerId,
-        Statistics : [
-            {
-                "StatisticName": "TestScore",
-                "Value": getRandomInRange(100,1000)
-            }
-        ]
-    });
+    log.debug(totalAmt);
+
+    for(var i=0; i<profile.ValuesToDate.length; i++)
+    {
+        var vtd = profile.ValuesToDate[i];
+        var s= "value: "+vtd.TotalValueAsDecimal;
+        log.debug(s);
+    }
+
 }
-
 // Utility method to generate random number
 let getRandomInRange = (min, max) => {
     return Math.round(Math.random() * (max - min) + min);
