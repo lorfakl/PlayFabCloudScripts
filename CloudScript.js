@@ -10,8 +10,10 @@ handlers.Rule_TestProfile = function (args, context)
     {
         var vtd = profile.ValuesToDate[i];
         var s= "value: "+vtd.TotalValueAsDecimal;
-        log.debug(s);
+        //log.debug(s);
     }
+
+    log.debug(profile.ValuesToDate)
 
 }
 // Utility method to generate random number
