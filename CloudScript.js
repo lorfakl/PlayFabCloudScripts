@@ -3,7 +3,7 @@ handlers.Rule_TestProfile = function (args, context)
 {
     var profile = context.playerProfile;
     var totalAmt = profile.TotalValueToDateInUSD/100;
-
+//changes yo
     log.debug(totalAmt);
 
     for(var i=0; i<profile.ValuesToDate.length; i++)
