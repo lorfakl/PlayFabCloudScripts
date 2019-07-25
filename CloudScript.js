@@ -20,3 +20,12 @@ handlers.Rule_TestProfile = function (args, context)
 let getRandomInRange = (min, max) => {
     return Math.round(Math.random() * (max - min) + min);
 }
+
+handlers.GetPlayerTitleID = function (args, context)
+{
+  var request = { PlayFabId: currentPlayerId };
+
+  var userAccountResult = server.GetUserAccountInfo(request);
+
+  log.info(userAccountResult);
+}
