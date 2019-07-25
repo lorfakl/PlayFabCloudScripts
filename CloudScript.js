@@ -28,4 +28,10 @@ handlers.GetPlayerTitleID = function (args, context)
   var userAccountResult = server.GetUserAccountInfo(request);
 
   log.info(userAccountResult);
+  var userInfo = userAccountResult.UserAccountInfo;
+  log.info(userInfo);
+  var titleInfo = userInfo.UserTitleInfo;
+  log.info(titleInfo);
+  var entityKey = titleInfo.TitlePlayerAccount;
+  log.info(entityKey.Id);
 }
