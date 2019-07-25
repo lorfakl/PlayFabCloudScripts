@@ -28,6 +28,8 @@ handlers.GetPlayerTitleID = function (args, context)
   var userAccountResult = server.GetUserAccountInfo(request);
 
   log.info(userAccountResult);
+
+  var jsUserInfo = JSON.parse(userAccountResult);
   var userInfo = userAccountResult.UserAccountInfo;
   log.info(userInfo);
   var titleInfo = userInfo.UserTitleInfo;
