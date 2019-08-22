@@ -13,7 +13,10 @@ handlers.Rule_TestProfile = function (args, context)
         //log.debug(s);
     }
 
+    var word = "this is anew line for github for testing";
+    
     log.debug(profile.ValuesToDate)
+
 
 }
 // Utility method to generate random number
